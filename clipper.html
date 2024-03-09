@@ -1,0 +1,34 @@
+
+  <div class="clipper-ui" id="clipper-extension">
+    <header>
+      <h1>Web Clipper</h1>
+      <button class="close-btn">×</button>
+    </header>
+    <main>
+      <button class="save-clip-btn">Save clip</button>
+      <div class="clip-format">
+        <h2>Clip format</h2>
+        <ul>
+            <li><button id="clip-multi-select">⬜ Multi-Select</button></li>
+            <li><button id="clip-full-page">⌾ Full page</button></li>
+            <li><button id="clip-screenshot">📷 Screenshot</button></li>
+      </div>
+      <div class="clip-content"></div>
+      <div class="save-to">
+        <h2>Save to:</h2>
+        <select title="collections">
+          <option>Other Notes</option>
+          <!-- Add more options here -->
+        </select>
+      </div>
+      <div class="additional-options">
+        <h2>Add:</h2>
+        <input type="text" id="clipper-tags" placeholder="⚑ Tag..." />
+        <input type="text" id="clipper-notes" placeholder="✎ Notes..." />
+      </div>
+    </main>
+    <footer>
+      <button class="settings-btn">⚙</button>
+      <button class="help-btn">?</button>
+    </footer>
+  </div>

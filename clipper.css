@@ -1,0 +1,150 @@
+/* Reset and basic styles */
+.clipper-ui * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  
+  .clipper-ui {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #222;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* Ensure the Clipper UI is on top of other elements */
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  /* Header styles */
+  .clipper-ui header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #111;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .clipper-ui header h1 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .clipper-ui .close-btn {
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Main content styles */
+  .clipper-ui main {
+    padding: 20px;
+  }
+  
+  .clipper-ui .save-clip-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .clipper-ui .clip-format h2,
+  .clipper-ui .save-to h2,
+  .clipper-ui .additional-options h2 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+.clipper-ui .clip-format ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.clipper-ui .clip-format ul li {
+    list-style: none;
+}
+
+.clipper-ui .clip-format button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: black;
+}
+  
+  .clipper-ui .icon {
+    margin-right: 10px;
+  }
+  
+  .clipper-ui .check {
+    margin-left: auto;
+    color: #4caf50;
+  }
+
+  .clipper-ui .clip-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    min-height: 200px;
+    max-height: 400px;
+    overflow: auto;
+  }
+  
+  .clipper-ui .save-to select {
+    width: 100%;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .clipper-ui .additional-options input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer styles */
+  .clipper-ui footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #111;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .clipper-ui footer img {
+    height: 20px;
+  }
+  
+  .clipper-ui footer button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
