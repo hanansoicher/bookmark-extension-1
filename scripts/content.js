@@ -60,17 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const saveButton = document.querySelector('.save-clip-btn');
   if (saveButton) {
       saveButton.addEventListener('click', () => {
-          const selectedFormat = document.querySelector('input[name="clip-format"]:checked').value;
           let content = '';
-          if (selectedFormat === 'multi-select') {
-              content = selections.join('\n'); // Use the selections array from selectionMode.js
-          } else if (selectedFormat === 'full-page') {
-              content = document.documentElement.outerHTML; // Capture the entire HTML of the page
-          }  
+          const clipContent = document.querySelector('.clip-content');
+          if (clipContent.textContent) {
+              content = clipContent.textContent;
+          } else if (clipContent.innerHTML) {
+              content = clipContent.innerHTML;
+          }
           const bookmarkData = {
-              title: document.title, // You can modify this to be more specific or user-defined
+              title: document.title,
               url: window.location.href,
-              collections: '',
+              collections: '', // add logic to handle collection selection
               tags: document.getElementById('clipper-tags').value.split(',').map(tag => tag.trim()),
               notes: document.getElementById('clipper-notes').value,
               content: content
@@ -82,12 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
                   // Close the clipper or provide feedback to the user
               } else {
                   console.error('Failed to save bookmark:', response.error);
-                  // Show an error message to the user
               }
           });
       });
   }
-});  
+});
+
 
 // Function to save bookmark data to the server
 function saveBookmark(bookmarkData, callback) {
